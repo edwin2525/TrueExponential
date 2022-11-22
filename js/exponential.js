@@ -94,7 +94,7 @@ angular.module('incremental',['ngAnimate']).directive('onFinishRender', function
 				return;
 			}
             if ($scope.player.n.comparedTo($scope.player.producerUpgradePrice[number]) >= 0) {
-                $scope.player.n = $scope.player.n.div($scope.player.producerUpgradePrice[number]);
+                $scope.player.n = $scope.player.n - $scope.player.producerUpgradePrice[number];
                 //$scope.player.multiplier = $scope.player.multiplier.plus($scope.multiplierUpgradePower[number]);
                 $scope.player.producerUpgradeLevel[number] = $scope.player.producerUpgradeLevel[number].plus(1);
                 $scope.player.producerUpgradeManual[number] = $scope.player.producerUpgradeManual[number].plus(1);
